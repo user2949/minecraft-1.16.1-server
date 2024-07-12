@@ -1,0 +1,25 @@
+package org.apache.logging.log4j.core.util.datetime;
+
+import java.text.FieldPosition;
+import java.text.ParseException;
+import java.text.ParsePosition;
+
+public abstract class Format {
+	public final String format(Object obj) {
+		return this.format(obj, new StringBuilder(), new FieldPosition(0)).toString();
+	}
+
+	public abstract StringBuilder format(Object object, StringBuilder stringBuilder, FieldPosition fieldPosition);
+
+	public abstract Object parseObject(String string, ParsePosition parsePosition);
+
+	public Object parseObject(String source) throws ParseException {
+		ParsePosition pos = new ParsePosition(0);
+		Object result = this.parseObject(source, pos);
+		if (pos.getIndex() == 0) {
+			throw new ParseException("Format.parseObject(String) failed", pos.getErrorIndex());
+		} else {
+			return result;
+		}
+	}
+}

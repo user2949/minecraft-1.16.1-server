@@ -1,0 +1,5 @@
+public enum cak {
+	INVISIBLE,
+	ENTITYBLOCK_ANIMATED,
+	MODEL;
+}

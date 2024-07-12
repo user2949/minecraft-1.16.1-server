@@ -1,0 +1,96 @@
+public class acu {
+	public static final act<bvr> a = a("mined", gl.aj);
+	public static final act<bke> b = a("crafted", gl.am);
+	public static final act<bke> c = a("used", gl.am);
+	public static final act<bke> d = a("broken", gl.am);
+	public static final act<bke> e = a("picked_up", gl.am);
+	public static final act<bke> f = a("dropped", gl.am);
+	public static final act<aoq<?>> g = a("killed", gl.al);
+	public static final act<aoq<?>> h = a("killed_by", gl.al);
+	public static final act<uh> i = a("custom", gl.aE);
+	public static final uh j = a("leave_game", acs.b);
+	public static final uh k = a("play_one_minute", acs.e);
+	public static final uh l = a("time_since_death", acs.e);
+	public static final uh m = a("time_since_rest", acs.e);
+	public static final uh n = a("sneak_time", acs.e);
+	public static final uh o = a("walk_one_cm", acs.d);
+	public static final uh p = a("crouch_one_cm", acs.d);
+	public static final uh q = a("sprint_one_cm", acs.d);
+	public static final uh r = a("walk_on_water_one_cm", acs.d);
+	public static final uh s = a("fall_one_cm", acs.d);
+	public static final uh t = a("climb_one_cm", acs.d);
+	public static final uh u = a("fly_one_cm", acs.d);
+	public static final uh v = a("walk_under_water_one_cm", acs.d);
+	public static final uh w = a("minecart_one_cm", acs.d);
+	public static final uh x = a("boat_one_cm", acs.d);
+	public static final uh y = a("pig_one_cm", acs.d);
+	public static final uh z = a("horse_one_cm", acs.d);
+	public static final uh A = a("aviate_one_cm", acs.d);
+	public static final uh B = a("swim_one_cm", acs.d);
+	public static final uh C = a("strider_one_cm", acs.d);
+	public static final uh D = a("jump", acs.b);
+	public static final uh E = a("drop", acs.b);
+	public static final uh F = a("damage_dealt", acs.c);
+	public static final uh G = a("damage_dealt_absorbed", acs.c);
+	public static final uh H = a("damage_dealt_resisted", acs.c);
+	public static final uh I = a("damage_taken", acs.c);
+	public static final uh J = a("damage_blocked_by_shield", acs.c);
+	public static final uh K = a("damage_absorbed", acs.c);
+	public static final uh L = a("damage_resisted", acs.c);
+	public static final uh M = a("deaths", acs.b);
+	public static final uh N = a("mob_kills", acs.b);
+	public static final uh O = a("animals_bred", acs.b);
+	public static final uh P = a("player_kills", acs.b);
+	public static final uh Q = a("fish_caught", acs.b);
+	public static final uh R = a("talked_to_villager", acs.b);
+	public static final uh S = a("traded_with_villager", acs.b);
+	public static final uh T = a("eat_cake_slice", acs.b);
+	public static final uh U = a("fill_cauldron", acs.b);
+	public static final uh V = a("use_cauldron", acs.b);
+	public static final uh W = a("clean_armor", acs.b);
+	public static final uh X = a("clean_banner", acs.b);
+	public static final uh Y = a("clean_shulker_box", acs.b);
+	public static final uh Z = a("interact_with_brewingstand", acs.b);
+	public static final uh aa = a("interact_with_beacon", acs.b);
+	public static final uh ab = a("inspect_dropper", acs.b);
+	public static final uh ac = a("inspect_hopper", acs.b);
+	public static final uh ad = a("inspect_dispenser", acs.b);
+	public static final uh ae = a("play_noteblock", acs.b);
+	public static final uh af = a("tune_noteblock", acs.b);
+	public static final uh ag = a("pot_flower", acs.b);
+	public static final uh ah = a("trigger_trapped_chest", acs.b);
+	public static final uh ai = a("open_enderchest", acs.b);
+	public static final uh aj = a("enchant_item", acs.b);
+	public static final uh ak = a("play_record", acs.b);
+	public static final uh al = a("interact_with_furnace", acs.b);
+	public static final uh am = a("interact_with_crafting_table", acs.b);
+	public static final uh an = a("open_chest", acs.b);
+	public static final uh ao = a("sleep_in_bed", acs.b);
+	public static final uh ap = a("open_shulker_box", acs.b);
+	public static final uh aq = a("open_barrel", acs.b);
+	public static final uh ar = a("interact_with_blast_furnace", acs.b);
+	public static final uh as = a("interact_with_smoker", acs.b);
+	public static final uh at = a("interact_with_lectern", acs.b);
+	public static final uh au = a("interact_with_campfire", acs.b);
+	public static final uh av = a("interact_with_cartography_table", acs.b);
+	public static final uh aw = a("interact_with_loom", acs.b);
+	public static final uh ax = a("interact_with_stonecutter", acs.b);
+	public static final uh ay = a("bell_ring", acs.b);
+	public static final uh az = a("raid_trigger", acs.b);
+	public static final uh aA = a("raid_win", acs.b);
+	public static final uh aB = a("interact_with_anvil", acs.b);
+	public static final uh aC = a("interact_with_grindstone", acs.b);
+	public static final uh aD = a("target_hit", acs.b);
+	public static final uh aE = a("interact_with_smithing_table", acs.b);
+
+	private static uh a(String string, acs acs) {
+		uh uh3 = new uh(string);
+		gl.a(gl.aE, string, uh3);
+		i.a(uh3, acs);
+		return uh3;
+	}
+
+	private static <T> act<T> a(String string, gl<T> gl) {
+		return gl.a(gl.aQ, string, new act<>(gl));
+	}
+}

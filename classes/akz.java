@@ -1,0 +1,21 @@
+import com.mojang.datafixers.schemas.Schema;
+import com.mojang.datafixers.types.templates.TypeTemplate;
+import java.util.Map;
+import java.util.function.Supplier;
+
+public class akz extends aka {
+	public akz(int integer, Schema schema) {
+		super(integer, schema);
+	}
+
+	protected static void a(Schema schema, Map<String, Supplier<TypeTemplate>> map, String string) {
+		schema.register(map, string, (Supplier<TypeTemplate>)(() -> akb.a(schema)));
+	}
+
+	@Override
+	public Map<String, Supplier<TypeTemplate>> registerEntities(Schema schema) {
+		Map<String, Supplier<TypeTemplate>> map3 = super.registerEntities(schema);
+		a(schema, map3, "minecraft:illager_beast");
+		return map3;
+	}
+}
